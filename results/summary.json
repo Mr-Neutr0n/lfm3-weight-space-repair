@@ -1,0 +1,477 @@
+{
+  "astra-practice": {
+    "arms": {
+      "astra-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 289,
+        "tokens_per_case": 36.125,
+        "categories": {
+          "safe_hold_reason_contract": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      },
+      "astra-half-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      },
+      "astra-random-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      },
+      "stock-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      }
+    },
+    "paired_vs_stock_direct": {
+      "astra-direct": {
+        "gains": 1,
+        "regressions": 1,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "astra-half-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "astra-random-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      }
+    }
+  },
+  "fresh-final": {
+    "arms": {
+      "astra-direct": {
+        "n": 150,
+        "successes": 117,
+        "accuracy": 0.78,
+        "tokens": 5668,
+        "tokens_per_case": 37.78666666666667,
+        "categories": {
+          "action_after_revocation": 4,
+          "safe_hold_reason_contract": 5,
+          "stale_identifier": 17,
+          "stale_numeric": 7,
+          "success": 117
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 42
+      },
+      "astra-random-direct": {
+        "n": 150,
+        "successes": 118,
+        "accuracy": 0.7866666666666666,
+        "tokens": 5669,
+        "tokens_per_case": 37.79333333333334,
+        "categories": {
+          "action_after_revocation": 5,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 17,
+          "stale_numeric": 7,
+          "success": 118
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 43
+      },
+      "sol-direct": {
+        "n": 150,
+        "successes": 118,
+        "accuracy": 0.7866666666666666,
+        "tokens": 5669,
+        "tokens_per_case": 37.79333333333334,
+        "categories": {
+          "action_after_revocation": 5,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 17,
+          "stale_numeric": 7,
+          "success": 118
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 43
+      },
+      "stock-direct": {
+        "n": 150,
+        "successes": 118,
+        "accuracy": 0.7866666666666666,
+        "tokens": 5669,
+        "tokens_per_case": 37.79333333333334,
+        "categories": {
+          "action_after_revocation": 5,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 17,
+          "stale_numeric": 7,
+          "success": 118
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 43
+      },
+      "stock-thinking": {
+        "n": 150,
+        "successes": 144,
+        "accuracy": 0.96,
+        "tokens": 49820,
+        "tokens_per_case": 332.1333333333333,
+        "categories": {
+          "stale_identifier": 6,
+          "success": 144
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 69
+      }
+    },
+    "paired_vs_stock_direct": {
+      "astra-direct": {
+        "gains": 0,
+        "regressions": 1,
+        "difference_pp": -0.6666666666666666,
+        "exact_mcnemar_p": 1.0
+      },
+      "astra-random-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "sol-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "stock-thinking": {
+        "gains": 27,
+        "regressions": 1,
+        "difference_pp": 17.333333333333332,
+        "exact_mcnemar_p": 2.1606683731079102e-07
+      }
+    }
+  },
+  "sol-development": {
+    "arms": {
+      "sol-direct": {
+        "n": 50,
+        "successes": 38,
+        "accuracy": 0.76,
+        "tokens": 1921,
+        "tokens_per_case": 38.42,
+        "categories": {
+          "action_after_revocation": 3,
+          "identifier_copy_error": 1,
+          "safe_hold_reason_contract": 1,
+          "stale_identifier": 5,
+          "stale_numeric": 2,
+          "success": 38
+        },
+        "unchanged_n": 25,
+        "unchanged_successes": 25,
+        "updated_n": 25,
+        "updated_successes": 13
+      },
+      "sol-random-direct": {
+        "n": 50,
+        "successes": 37,
+        "accuracy": 0.74,
+        "tokens": 1921,
+        "tokens_per_case": 38.42,
+        "categories": {
+          "action_after_revocation": 3,
+          "identifier_copy_error": 1,
+          "safe_hold_reason_contract": 1,
+          "stale_identifier": 5,
+          "stale_numeric": 3,
+          "success": 37
+        },
+        "unchanged_n": 25,
+        "unchanged_successes": 25,
+        "updated_n": 25,
+        "updated_successes": 12
+      },
+      "stock-direct": {
+        "n": 50,
+        "successes": 37,
+        "accuracy": 0.74,
+        "tokens": 1921,
+        "tokens_per_case": 38.42,
+        "categories": {
+          "action_after_revocation": 3,
+          "identifier_copy_error": 1,
+          "safe_hold_reason_contract": 1,
+          "stale_identifier": 5,
+          "stale_numeric": 3,
+          "success": 37
+        },
+        "unchanged_n": 25,
+        "unchanged_successes": 25,
+        "updated_n": 25,
+        "updated_successes": 12
+      },
+      "stock-thinking": {
+        "n": 50,
+        "successes": 47,
+        "accuracy": 0.94,
+        "tokens": 18379,
+        "tokens_per_case": 367.58,
+        "categories": {
+          "stale_identifier": 2,
+          "stale_numeric": 1,
+          "success": 47
+        },
+        "unchanged_n": 25,
+        "unchanged_successes": 25,
+        "updated_n": 25,
+        "updated_successes": 22
+      }
+    },
+    "paired_vs_stock_direct": {
+      "sol-direct": {
+        "gains": 1,
+        "regressions": 0,
+        "difference_pp": 2.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "sol-random-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "stock-thinking": {
+        "gains": 11,
+        "regressions": 1,
+        "difference_pp": 20.0,
+        "exact_mcnemar_p": 0.00634765625
+      }
+    }
+  },
+  "sol-final": {
+    "arms": {
+      "sol-direct": {
+        "n": 150,
+        "successes": 121,
+        "accuracy": 0.8066666666666666,
+        "tokens": 5660,
+        "tokens_per_case": 37.733333333333334,
+        "categories": {
+          "action_after_revocation": 6,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 15,
+          "stale_numeric": 5,
+          "success": 121
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 46
+      },
+      "sol-random-direct": {
+        "n": 150,
+        "successes": 120,
+        "accuracy": 0.8,
+        "tokens": 5660,
+        "tokens_per_case": 37.733333333333334,
+        "categories": {
+          "action_after_revocation": 6,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 16,
+          "stale_numeric": 5,
+          "success": 120
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 45
+      },
+      "stock-direct": {
+        "n": 150,
+        "successes": 120,
+        "accuracy": 0.8,
+        "tokens": 5660,
+        "tokens_per_case": 37.733333333333334,
+        "categories": {
+          "action_after_revocation": 6,
+          "safe_hold_reason_contract": 3,
+          "stale_identifier": 16,
+          "stale_numeric": 5,
+          "success": 120
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 45
+      },
+      "stock-thinking": {
+        "n": 150,
+        "successes": 148,
+        "accuracy": 0.9866666666666667,
+        "tokens": 51724,
+        "tokens_per_case": 344.82666666666665,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 148,
+          "truncation": 1
+        },
+        "unchanged_n": 75,
+        "unchanged_successes": 75,
+        "updated_n": 75,
+        "updated_successes": 73
+      }
+    },
+    "paired_vs_stock_direct": {
+      "sol-direct": {
+        "gains": 1,
+        "regressions": 0,
+        "difference_pp": 0.6666666666666666,
+        "exact_mcnemar_p": 1.0
+      },
+      "sol-random-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "stock-thinking": {
+        "gains": 29,
+        "regressions": 1,
+        "difference_pp": 18.666666666666668,
+        "exact_mcnemar_p": 5.774199962615967e-08
+      }
+    }
+  },
+  "sol-practice": {
+    "arms": {
+      "localization-repeat": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      },
+      "sol-direct": {
+        "n": 8,
+        "successes": 8,
+        "accuracy": 1.0,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "success": 8
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 4
+      },
+      "sol-random-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      },
+      "stock-direct": {
+        "n": 8,
+        "successes": 7,
+        "accuracy": 0.875,
+        "tokens": 279,
+        "tokens_per_case": 34.875,
+        "categories": {
+          "stale_numeric": 1,
+          "success": 7
+        },
+        "unchanged_n": 4,
+        "unchanged_successes": 4,
+        "updated_n": 4,
+        "updated_successes": 3
+      }
+    },
+    "paired_vs_stock_direct": {
+      "localization-repeat": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      },
+      "sol-direct": {
+        "gains": 1,
+        "regressions": 0,
+        "difference_pp": 12.5,
+        "exact_mcnemar_p": 1.0
+      },
+      "sol-random-direct": {
+        "gains": 0,
+        "regressions": 0,
+        "difference_pp": 0.0,
+        "exact_mcnemar_p": 1.0
+      }
+    }
+  }
+}

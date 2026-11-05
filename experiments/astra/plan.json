@@ -1,0 +1,127 @@
+{
+  "experiment": "liquid-mission-control-astra-v2",
+  "phase": "sparse-edit-v1",
+  "protocol_sha256": "b95d4efb034f2c0ba436c5d7b5e871f29f78cab804bfa98030f2105fda580011",
+  "editor": {
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high",
+    "serviceTier": "priority",
+    "identity_source": "T3 orchestrator_capabilities inherited runtime options, verified 2026-11-05",
+    "other_editor_models": []
+  },
+  "authorization": "Explicit user authorization for this new independent attempt including GPU probes.",
+  "candidate_mode": "direct",
+  "probe_case_ids": [
+    "practice-navigation-004-unchanged",
+    "practice-navigation-004-updated",
+    "practice-docking-002-unchanged",
+    "practice-docking-002-updated",
+    "practice-power-001-unchanged",
+    "practice-power-001-updated",
+    "practice-cooling-001-unchanged",
+    "practice-cooling-001-updated"
+  ],
+  "adaptive_budget": {
+    "maximum_episodes": 32,
+    "episodes_per_stage": {
+      "discovery": 8,
+      "candidate-a": 8,
+      "candidate-b": 8,
+      "control": 8
+    },
+    "unit": "One prompt and one generation, including activation inspection in that generation. No extra teacher-forced forwards.",
+    "preexisting_feedback": "Original baseline RESULTS.md only. Old final data and evaluation traces excluded."
+  },
+  "localization": {
+    "capture": "w2 input at the last token of each forward during the eight stock practice generations.",
+    "method": "Inspect negative activation times output-column projection onto desired-minus-actual unembedding rows at the first oracle/native-token divergence. This is a rough logit attribution, not a causal guarantee. No backpropagation, learned map, optimization, parameter fitting, or teacher-forced extra passes.",
+    "eligible_failures": [
+      "exact stale numeric",
+      "exact stale identifier",
+      "action after revocation"
+    ],
+    "exclude_from_target_selection": [
+      "identifier copying corruption",
+      "safe hold with reason-string mismatch",
+      "formatting",
+      "truncation"
+    ],
+    "selection": "Manual choice up to eight columns. Inspect recurrent adverse attribution in later layers, including layer 22. Exclude all eight Sol selected layer-23 columns. No numerical candidate search."
+  },
+  "candidates": {
+    "candidate-a": {
+      "factor": 0.5,
+      "maximum_columns": 8
+    },
+    "candidate-b": {
+      "factor": 0.0,
+      "same_columns_as": "candidate-a"
+    }
+  },
+  "selection": {
+    "rule": "Among the two candidates, maximize strict practice successes. Then minimize genuine stale/revocation failures, unchanged-order regressions, generated tokens, and intervention norm in that order; final tie chooses candidate-a. Freeze the winning tested candidate even if both fail to improve. Claim useful repair only if strict improvement and no unchanged-order regression.",
+    "before_control": true,
+    "no_selection_after_freeze": true
+  },
+  "control": {
+    "type": "random columns in the same layers with the same count and scaling factor as selected patch; reject selected columns",
+    "seed": 20261105,
+    "feedback": "Eight practice control responses are recorded after selection is frozen and cannot change it."
+  },
+  "evaluation": {
+    "adaptive": false,
+    "only_after_freeze": true,
+    "splits": [
+      "final"
+    ],
+    "expected_cases": {
+      "final": 150
+    },
+    "arms": {
+      "stock-direct": {
+        "mode": "direct",
+        "patch": null
+      },
+      "sol-direct": {
+        "mode": "direct",
+        "patch": "editing/patches/sol.json"
+      },
+      "edited-direct": {
+        "mode": "direct",
+        "patch": "frozen-selected"
+      },
+      "random-direct": {
+        "mode": "direct",
+        "patch": "frozen-control"
+      },
+      "stock-thinking": {
+        "mode": "thinking",
+        "patch": null
+      }
+    },
+    "maximum_generations": 750,
+    "order": "Each arm runs all cases, in manifest order. Model weights restore exactly between arms.",
+    "final_handling": "Parent generates fresh final cases after handoff. Separate local cases argument streams prompts to owned socket. Editor never opens cases or receives evaluation feedback.",
+    "metrics": [
+      "strict success",
+      "changed/unchanged and per-family outcomes",
+      "exact stale numeric/identifier",
+      "actual action after revocation",
+      "safe-hold reason contract",
+      "copying/other argument errors",
+      "syntax and truncation",
+      "generated tokens",
+      "generation seconds",
+      "paired gains and regressions"
+    ]
+  },
+  "compute": {
+    "maximum_allocated_gpu_seconds_total_including_baseline": 7200,
+    "baseline_allocated_seconds": 0,
+    "maximum_generation_seconds_total_including_baseline": 6000,
+    "baseline_runner_seconds": 0,
+    "gpu": "one NVIDIA L40S on dash2",
+    "submission": "ops/cluster.py with phase-scoped immutable bindings and exclusive ledgers"
+  },
+  "created_utc": "2026-11-05"
+}

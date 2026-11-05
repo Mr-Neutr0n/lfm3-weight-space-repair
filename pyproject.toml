@@ -1,0 +1,9 @@
+[project]
+name = "lfm3-weight-space-repair"
+version = "0.1.0"
+description = "Two bounded LLM weight-editing attempts with matched tool-use evaluation"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false

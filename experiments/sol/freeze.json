@@ -1,0 +1,51 @@
+{
+  "phase": "sparse-edit-v1",
+  "created_utc": "2026-11-05T14:14:14.448141+00:00",
+  "editor": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "harness": "Codex in T3 Code",
+    "identity_source": "runtime instructions",
+    "other_editor_models": []
+  },
+  "plan_sha256": "ad82abf0318aa995c2f43f3160ea10335babf145fda0fc97348df57dc3f3dfe5",
+  "protocol_sha256": "36096d9ac1d8bc9a24667bbc37d75c6f8f77a3df5c9ae54ef7785e5c88ec6049",
+  "data_manifest_sha256": "ea6167ece2d2167c95d97c257c01685f1abbbfbe15a8e61b6c1b58601ab3dec2",
+  "amendment": "editing/decisions/001-localization-repair.json",
+  "amendment_sha256": "f0e6774e1ea71e207e99055b98cf67ab5a6014c1d68bf2d950794e143b581d32",
+  "selected_stage": "candidate-b",
+  "selected_patch": "editing/patches/selected.json",
+  "selected_patch_sha256": "c90a166aa6e88093ee021679406b6ed0cf49d9b742008c6af0c1a315860455ac",
+  "control_patch": "editing/patches/random-control.json",
+  "control_patch_sha256": "030ff92a04f804644210fcebda329c3af71428250436e1977ddfed0e2bbaf97d",
+  "columns_decision": "editing/decisions/002-columns.json",
+  "columns_decision_sha256": "17dcebc88b773fe503bc73d62efe3381c57590faf61965641cad5af047f899a3",
+  "probe_evidence": {
+    "discovery": {
+      "summary_sha256": "f4d5c329fd2c0e9b0298ee9bc17a26a8f1b056a3ac5a82c815f824fab1b27c74",
+      "responses_sha256": "6b4f39c400a57f0efb3c4840b9613142789ceb6af9f265ed64918e69cf7cb02a"
+    },
+    "candidate-a": {
+      "summary_sha256": "ef28a8e332d179311805f52619ee253924c1be06bdcb0c0bdc1498bae3a3ebf9",
+      "responses_sha256": "2cacba1fa19185f4b139e2e9c90b67d525f2cf3f7beb5de30219941c7831d81d"
+    },
+    "candidate-b": {
+      "summary_sha256": "6428d3c7347703cf96ef6e6226e17fae1c715c0d5796effb23f13f3561e82044",
+      "responses_sha256": "dceaad0097989fe6394291b0f1f0b1969160409cf3e4250d0541932b563fc199"
+    }
+  },
+  "probe_episodes_consumed_before_freeze": 24,
+  "adaptive_selection_closed": true,
+  "final_feedback_seen": false,
+  "selection_summary": "One actual edited candidate tested after an eight-episode localization repair. Corrected stock 7/8 versus edited8/8; unchanged4/4 in both. True stale-numeric error repaired, not a reason-string/copying change. Freeze exactly this tested patch before control/final results.",
+  "practice": {
+    "stock_successes": 7,
+    "edited_successes": 8,
+    "cases": 8,
+    "stock_tokens": 279,
+    "edited_tokens": 279
+  },
+  "actual_changed_scalars": 16384,
+  "selected_columns_file_sha256": "7430e10ba4f41439909ba96b53accb6a26b1c11f8e8376a6b2b40862687f356a",
+  "no_more_candidates": true
+}

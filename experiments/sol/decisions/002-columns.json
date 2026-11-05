@@ -1,0 +1,116 @@
+{
+  "editor": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "harness": "Codex in T3 Code"
+  },
+  "created_utc": "2026-11-05T14:11:15.864494+00:00",
+  "amendment": "editing/decisions/001-localization-repair.json",
+  "amendment_sha256": "f0e6774e1ea71e207e99055b98cf67ab5a6014c1d68bf2d950794e143b581d32",
+  "prompt": "Use the corrected stock practice activation evidence to propose one sparse weight patch within eight w2 columns, without gradients or fitting. Target genuine stale-order failure. Exclude initial power ordering-only attribution, copying errors, and reason-only changes. Freeze after the next eight patched probes; no final feedback.",
+  "localization_stage": "candidate-a",
+  "inspection_sha256": "d3ff7655377bfe9e7bbacae6044e79830e17cb065a9ee023958a200ed790fdea",
+  "inspection_path": "results/edits/candidate-a/inspection.json",
+  "tensors_sha256": "3cf849d3dda62675b2d2bd14e2cf4cadb0f2e4d29e57d70fe918d132a2c0c756",
+  "evidence": {
+    "case_id": "practice-power-001-updated",
+    "category": "stale_numeric",
+    "desired_token": 2036,
+    "emitted_token": 1467,
+    "desired_text": "35",
+    "emitted_text": "23",
+    "first_token_divergence": 27,
+    "stock_successes": 7,
+    "stock_cases": 8,
+    "corrected_stock_generated_ids_match_original_discovery": true,
+    "ranked_selected_columns": [
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 3650,
+        "approx_contribution": -0.19770097732543945,
+        "activation": 1.0625,
+        "projection": -0.186071515083313,
+        "column_l2": 0.7710341215133667
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 4026,
+        "approx_contribution": -0.1468154489994049,
+        "activation": 1.9921875,
+        "projection": -0.0736956000328064,
+        "column_l2": 0.8272972106933594
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 1135,
+        "approx_contribution": -0.11367219686508179,
+        "activation": 2.046875,
+        "projection": -0.05553450807929039,
+        "column_l2": 0.8233165740966797
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 5713,
+        "approx_contribution": -0.09722200781106949,
+        "activation": -1.34375,
+        "projection": 0.07235126197338104,
+        "column_l2": 0.8153659701347351
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 5426,
+        "approx_contribution": -0.08691006898880005,
+        "activation": 3.375,
+        "projection": -0.025751130655407906,
+        "column_l2": 0.8985251784324646
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 2780,
+        "approx_contribution": -0.06627686321735382,
+        "activation": 0.64453125,
+        "projection": -0.10282956063747406,
+        "column_l2": 0.8871409893035889
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 1904,
+        "approx_contribution": -0.06403488665819168,
+        "activation": -1.6171875,
+        "projection": 0.039596449583768845,
+        "column_l2": 0.6990435719490051
+      },
+      {
+        "tensor": "model.layers.23.feed_forward.w2.weight",
+        "column": 3415,
+        "approx_contribution": -0.06186555698513985,
+        "activation": 2.53125,
+        "projection": -0.024440713226795197,
+        "column_l2": 0.9194796085357666
+      }
+    ]
+  },
+  "selected_columns": [
+    {
+      "tensor": "model.layers.23.feed_forward.w2.weight",
+      "columns": [
+        1135,
+        1904,
+        2780,
+        3415,
+        3650,
+        4026,
+        5426,
+        5713
+      ]
+    }
+  ],
+  "factor": 0.0,
+  "decision_summary": "Zero the eight last-layer columns with the strongest negative approximate contributions at the verified numeric choice, 35 versus stale 23. The last layer reduces the unmodelled later-layer transformation in the projection. This is a causal intervention test, not proof that these columns encode order authority. Earlier-layer rankings and the invalid first discovery attribution do not select the patch. One edited candidate remains after the localization repair.",
+  "limits": [
+    "Only one genuine practice failure localized.",
+    "Projection ignores post-MLP and final normalization and repetition penalty.",
+    "A number preference may fail to transfer to revocation or other identifiers.",
+    "No final content or feedback was supplied to selection."
+  ]
+}

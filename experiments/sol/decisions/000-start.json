@@ -1,0 +1,18 @@
+{
+  "editor": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "harness": "Codex in T3 Code",
+    "identity_source": "runtime instructions",
+    "other_editor_models": []
+  },
+  "prompt": "Proceed with the authorized sparse weight-editing experiment. Read frozen protocol; direct mode only for selection, <=16384 changed scalars and <=32 probe episodes, no gradients or fitting, final cases inaccessible during selection.",
+  "decision_summary": "Use eight preselected practice cases for stock activation inspection, two hand-chosen scaling factors on the same sparse columns, then a matched random-column control. Freeze before separate evaluation.",
+  "candidate_prompts_and_decisions": "Each subsequent decision file records the evidence supplied, proposed patch, and short rationale. Internal chain-of-thought is not collected.",
+  "prior_baseline": {
+    "direct": 37,
+    "thinking": 47,
+    "denominator": 50
+  },
+  "plan_sha256": "ad82abf0318aa995c2f43f3160ea10335babf145fda0fc97348df57dc3f3dfe5"
+}

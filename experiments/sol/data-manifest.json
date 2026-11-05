@@ -1,0 +1,20 @@
+{
+  "protocol_sha256": "36096d9ac1d8bc9a24667bbc37d75c6f8f77a3df5c9ae54ef7785e5c88ec6049",
+  "splits": {
+    "practice": {
+      "file": "practice.jsonl",
+      "cases": 50,
+      "sha256": "7b5e51c0cfa1ea018f23f8f9936382f3f65d858fbe49af1b2d30495aa0ac7c6b"
+    },
+    "development": {
+      "file": "development.jsonl",
+      "cases": 50,
+      "sha256": "6ce480db054c002873b192bdc52b0b5812f7de19f2cfb82caff0dc42e1000b2b"
+    },
+    "final": {
+      "file": "final.jsonl",
+      "cases": 150,
+      "sha256": "45f35e2a233882e6760d055714f5bc94c51e51fa0b767c0d54cec35d48bb8fb2"
+    }
+  }
+}

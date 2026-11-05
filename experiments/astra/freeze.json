@@ -1,0 +1,36 @@
+{
+  "phase": "sparse-edit-v1",
+  "plan_sha256": "7efc635b3ffb5ed86bfa4403bfdad78af4cfdbf7442dccb7c938558bcec70de1",
+  "protocol_sha256": "b95d4efb034f2c0ba436c5d7b5e871f29f78cab804bfa98030f2105fda580011",
+  "data_manifest_sha256": "721cef7bfb14154ca5b450da866351750f8d8ca63db26f350de34a63855e7050",
+  "selected_stage": "candidate-b",
+  "adaptive_selection_closed": true,
+  "final_feedback_seen": false,
+  "probe_episodes_consumed_before_freeze": 24,
+  "probe_evidence": {
+    "discovery": {
+      "summary_sha256": "51fd5afff614c416f09c8de2611f3f8f4db97f47e8d4b62df0a0b8af0e2a7a96",
+      "responses_sha256": "a0b186fd34d07a7f7676ac49ce9e7dd7305ee27b0f772ff57c791a5ce69dac5f"
+    },
+    "candidate-a": {
+      "summary_sha256": "ff6bea85040bca34ef71d7890335df40e45dce0db88ebb264b2484f8a1ebd272",
+      "responses_sha256": "b12a37cbd4ccafb03e7faf8f6f5fd5ca1a350b5c7ec9a422026b8ae3a082c333"
+    },
+    "candidate-b": {
+      "summary_sha256": "408d0f4ab232b5052e1270c70e3b307b7e7ca22f57edf0ccc406aae529f7e4bd",
+      "responses_sha256": "a82e952f18140a2b68895a2d925b99ffee457f0ea7c6d687f26534c3c2e2c0b6"
+    }
+  },
+  "selection_reason": "Frozen lexicographic rule: successes, genuine stale/revocation failures, unchanged regressions, tokens, intervention norm. No useful repair unless strict improvement without unchanged regression.",
+  "practice_successes": {
+    "discovery": 7,
+    "candidate-a": 7,
+    "candidate-b": 7
+  },
+  "selected_patch": "editing/patches/selected.json",
+  "selected_patch_sha256": "d05009e26c12393c386d584bc89be3b12798031f100634e3e3a5158a13cdc153",
+  "control_patch": "editing/patches/random-control.json",
+  "control_patch_sha256": "8fccb9399f075f440d81461feb36d43923f207d719b0aa9ad770e93eb70faadb",
+  "sol_patch": "editing/patches/sol.json",
+  "sol_patch_sha256": "c90a166aa6e88093ee021679406b6ed0cf49d9b742008c6af0c1a315860455ac"
+}

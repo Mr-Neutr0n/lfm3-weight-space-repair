@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-05",
+  "owner": "Hari",
+  "github_owner": "Mr-Neutr0n",
+  "target": "LiquidAI/LFM3-1.7B",
+  "target_revision": "0dc4268b561499c648c7ba7c9466bf3d8d01517a",
+  "editors": {
+    "sol": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh",
+      "service_tier": "default"
+    },
+    "astra": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "service_tier": "priority"
+    }
+  },
+  "each_attempt": {
+    "max_probe_episodes": 32,
+    "max_changed_scalars": 16384,
+    "max_allocated_gpu_seconds": 7200
+  },
+  "private_final_cases": true,
+  "fresh_final_generated_after_astra_stopped": true,
+  "boundary": "Separate parent evaluator and directory after editor stopped. Same Unix user; no hard OS sandbox.",
+  "editor_api_tokens": null,
+  "editor_currency_cost": null,
+  "control_scope": "One random column control per attempt, matched layer/count/factor, approximately similar intervention norm, not exact norm matching.",
+  "statistics": "Exact McNemar values are exploratory conditional discordance tests. Synthetic paired cases share templates; they do not establish population failure rates.",
+  "public_replay": {
+    "semantic_rescoring": "Practice and development raw records",
+    "final_statistics": "Aggregate and paired statistics from anonymized graded outcome rows",
+    "not_available": "Independent semantic rescoring of private final inputs/outputs"
+  }
+}

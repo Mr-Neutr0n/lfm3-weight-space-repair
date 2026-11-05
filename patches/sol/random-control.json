@@ -1,0 +1,24 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "model_revision": "0dc4268b561499c648c7ba7c9466bf3d8d01517a",
+  "editor": "gpt-6.1-sol",
+  "method": "predeclared seeded random-column control, same layer/count/factor",
+  "seed": 20261105,
+  "edits": [
+    {
+      "tensor": "model.layers.23.feed_forward.w2.weight",
+      "columns": [
+        804,
+        1054,
+        1238,
+        4959,
+        5589,
+        6467,
+        6563,
+        6915
+      ],
+      "factor": 0.0,
+      "before_sha256": "0b304847d061b9c444b2b32620ce27ed4785478a1b43dca355a5648fa8420f37"
+    }
+  ]
+}

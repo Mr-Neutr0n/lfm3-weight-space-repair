@@ -1,0 +1,35 @@
+{
+  "id": "localization-repair-v1",
+  "base_plan_sha256": "ad82abf0318aa995c2f43f3160ea10335babf145fda0fc97348df57dc3f3dfe5",
+  "created_utc": "2026-11-05T14:06:31.645800+00:00",
+  "reason": "Discovery produced one genuine stale-numeric failure, but its oracle/native reference sorted parameter names instead of using schema order. Its first-divergence attribution targeted parameter order and is excluded. The other seven practice cases passed. No invalid attribution will select weights.",
+  "protocol_changed": false,
+  "budgets_changed": false,
+  "discovery_preserved": true,
+  "schedule": {
+    "discovery": {
+      "episodes": 8,
+      "role": "completed stock discovery, unusable power attribution excluded"
+    },
+    "candidate-a": {
+      "episodes": 8,
+      "role": "corrected stock localization, no weight edit, capture activations"
+    },
+    "candidate-b": {
+      "episodes": 8,
+      "role": "one actual sparse column-zeroing candidate selected after corrected localization",
+      "factor": 0.0,
+      "maximum_columns": 8
+    },
+    "control": {
+      "episodes": 8,
+      "role": "matched random-column control after candidate freeze"
+    }
+  },
+  "selection": "Freeze the single tested edited candidate-b regardless of outcome. Do not adapt after freeze. Report a negative result if it does not improve strict accuracy while preserving unchanged-order behavior. The original candidate-a half-damping experiment is not run.",
+  "no_extra_model_forwards": true,
+  "maximum_probe_episodes": 32,
+  "maximum_changed_scalars": 16384,
+  "final_feedback_seen": false,
+  "plan_sha256": "ad82abf0318aa995c2f43f3160ea10335babf145fda0fc97348df57dc3f3dfe5"
+}

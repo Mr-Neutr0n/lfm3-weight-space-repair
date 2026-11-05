@@ -1,0 +1,125 @@
+{
+  "experiment": "liquid-mission-control-v1",
+  "phase": "sparse-edit-v1",
+  "protocol_sha256": "36096d9ac1d8bc9a24667bbc37d75c6f8f77a3df5c9ae54ef7785e5c88ec6049",
+  "editor": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "harness": "Codex in T3 Code",
+    "identity_source": "runtime instructions",
+    "other_editor_models": []
+  },
+  "authorization": "User explicitly authorized actual weight editing, implementation, GPU probes, and separate evaluation on 2026-11-05. No gradients, fitting, or thinking-gate changes.",
+  "candidate_mode": "direct",
+  "probe_case_ids": [
+    "practice-navigation-004-unchanged",
+    "practice-navigation-004-updated",
+    "practice-docking-002-unchanged",
+    "practice-docking-002-updated",
+    "practice-power-001-unchanged",
+    "practice-power-001-updated",
+    "practice-cooling-001-unchanged",
+    "practice-cooling-001-updated"
+  ],
+  "adaptive_budget": {
+    "maximum_episodes": 32,
+    "episodes_per_stage": {
+      "discovery": 8,
+      "candidate-a": 8,
+      "candidate-b": 8,
+      "control": 8
+    },
+    "unit": "One prompt and one generation, including activation inspection in that generation. No extra teacher-forced forwards.",
+    "preexisting_feedback": "All 100 stock development baseline responses were reviewed before this phase. They are not new probes; this prior feedback is disclosed."
+  },
+  "localization": {
+    "capture": "w2 input at the last token of each forward during the eight stock practice generations.",
+    "method": "Inspect negative activation times output-column projection onto desired-minus-actual unembedding rows at the first oracle/native-token divergence. This is a rough logit attribution, not a causal guarantee. No backpropagation, learned map, optimization, parameter fitting, or teacher-forced extra passes.",
+    "eligible_failures": [
+      "exact stale numeric",
+      "exact stale identifier",
+      "action after revocation"
+    ],
+    "exclude_from_target_selection": [
+      "identifier copying corruption",
+      "safe hold with reason-string mismatch",
+      "formatting",
+      "truncation"
+    ],
+    "selection": "The editor manually chooses at most eight columns from reported attribution evidence and records its rationale. No hidden candidate sweep."
+  },
+  "candidates": {
+    "candidate-a": {
+      "factor": 0.5,
+      "maximum_columns": 8
+    },
+    "candidate-b": {
+      "factor": 0.0,
+      "same_columns_as": "candidate-a"
+    }
+  },
+  "selection": {
+    "rule": "Among the two candidates, maximize strict practice successes. Then minimize genuine stale/revocation failures, unchanged-order regressions, generated tokens, and intervention norm in that order; final tie chooses candidate-a. Freeze the winning tested candidate even if both fail to improve. Claim useful repair only if strict improvement and no unchanged-order regression.",
+    "before_control": true,
+    "no_selection_after_freeze": true
+  },
+  "control": {
+    "type": "random columns in the same layers with the same count and scaling factor as selected patch; reject selected columns",
+    "seed": 20261105,
+    "feedback": "Eight practice control responses are recorded after selection is frozen and cannot change it."
+  },
+  "evaluation": {
+    "adaptive": false,
+    "only_after_freeze": true,
+    "splits": [
+      "development",
+      "final"
+    ],
+    "expected_cases": {
+      "development": 50,
+      "final": 150
+    },
+    "arms": {
+      "stock-direct": {
+        "mode": "direct",
+        "patch": null
+      },
+      "edited-direct": {
+        "mode": "direct",
+        "patch": "frozen-selected"
+      },
+      "random-direct": {
+        "mode": "direct",
+        "patch": "frozen-control"
+      },
+      "stock-thinking": {
+        "mode": "thinking",
+        "patch": null
+      }
+    },
+    "maximum_generations": 800,
+    "order": "Each arm runs all cases, in manifest order. Model weights restore exactly between arms.",
+    "final_handling": "A separate local evaluator reads final cases only after freeze. It streams rendered prompts to an isolated GPU socket worker, without writing final cases or the private seed on the cluster. The editor does not receive final cases before selection. No candidate changes after any final feedback.",
+    "metrics": [
+      "strict success",
+      "changed/unchanged and per-family outcomes",
+      "exact stale numeric/identifier",
+      "actual action after revocation",
+      "safe-hold reason contract",
+      "copying/other argument errors",
+      "syntax and truncation",
+      "generated tokens",
+      "generation seconds",
+      "paired gains and regressions"
+    ]
+  },
+  "compute": {
+    "maximum_allocated_gpu_seconds_total_including_baseline": 7200,
+    "baseline_allocated_seconds": 317,
+    "maximum_generation_seconds_total_including_baseline": 6000,
+    "baseline_runner_seconds": 304.672186,
+    "gpu": "one NVIDIA L40S on dash2",
+    "submission": "ops/cluster.py with phase-scoped immutable bindings and exclusive ledgers"
+  },
+  "created_utc": "2026-11-05T13:45:36.550143+00:00"
+}

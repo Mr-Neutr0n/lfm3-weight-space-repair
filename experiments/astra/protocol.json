@@ -1,0 +1,51 @@
+{
+  "experiment": "liquid-mission-control-astra-v2",
+  "phase": "authorized-independent-attempt",
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "model_revision": "0dc4268b561499c648c7ba7c9466bf3d8d01517a",
+  "parameters": 1728801536,
+  "precision": "bfloat16",
+  "max_input_tokens": 4096,
+  "max_new_tokens": 2048,
+  "decoding": "greedy",
+  "repetition_penalty": 1.1,
+  "modes": [
+    "thinking",
+    "direct"
+  ],
+  "seed": 42,
+  "pilot_split": "development",
+  "split_pairs_per_family": {
+    "practice": 5,
+    "development": 5,
+    "final": 15
+  },
+  "split_seeds": {
+    "practice": 17101,
+    "development": 27202
+  },
+  "families": [
+    "navigation",
+    "docking",
+    "cargo",
+    "power",
+    "cooling"
+  ],
+  "max_gpu_seconds": 7200,
+  "generation_deadline_seconds": 6000,
+  "gate": {
+    "minimum_completed": 45,
+    "minimum_valid_calls": 45,
+    "minimum_successes": 10,
+    "minimum_valid_semantic_failures": 5
+  },
+  "edit_scope": {
+    "tensors": "model.layers.<index>.feed_forward.w2.weight",
+    "maximum_changed_scalars": 16384,
+    "maximum_probe_episodes": 32,
+    "gradients": false,
+    "fitting_to_data": false,
+    "final_feedback": false
+  },
+  "claim_scope": "Single next-action decisions on synthetic corrected mission orders. No claim about continuous flight control or production agent transfer."
+}

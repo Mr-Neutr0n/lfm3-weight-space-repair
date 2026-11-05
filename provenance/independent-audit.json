@@ -1,0 +1,20 @@
+{
+  "responses": 750,
+  "streamed_prefix": 655,
+  "recovered_from_existing_worker": 95,
+  "new_generations_for_recovery": 0,
+  "worker_terminal": "COMPLETED",
+  "worker_status_complete": true,
+  "source_bindings_match": true,
+  "tokenizer_files_match": true,
+  "all_native_prompts_and_input_ids_reconstructed": true,
+  "all_output_ids_decode_exactly": true,
+  "all_eos_and_truncation_flags_match": true,
+  "all_arms_have_identical_150_cases": true,
+  "prefix_preserved_sha256": "66aba2dafc01b53d7f127152166a3252574bc97d85cfbd794efcef53b5e3e35d",
+  "worker_responses_sha256": "4c91046d183ab4133aedeadbb30e0e4bf6bea7e1c62818b5e94e60634f5535ff",
+  "complete_local_responses_sha256": "f41d86553719aeae945915c98a29f33ea9cf5a31c248c2321cc2b42e8274c563",
+  "allocated_gpu_seconds_total_astra_attempt": 1188,
+  "sol_allocated_gpu_seconds_including_initial_baseline": 2211,
+  "budget_limit_each_attempt": 7200
+}

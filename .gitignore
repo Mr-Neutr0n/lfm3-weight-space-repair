@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+results/local*/
+runtime/
+models/
+data/final.jsonl
+data/*seed*.json
+.env
+*.env

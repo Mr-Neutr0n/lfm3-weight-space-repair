@@ -1,0 +1,12 @@
+{
+  "plan_sha256": "7efc635b3ffb5ed86bfa4403bfdad78af4cfdbf7442dccb7c938558bcec70de1",
+  "protocol_sha256": "b95d4efb034f2c0ba436c5d7b5e871f29f78cab804bfa98030f2105fda580011",
+  "baseline_review": "Direct 37/50 versus thinking 47/50; target stale values and revocation. New independent budget 32/7200.",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high",
+    "serviceTier": "priority",
+    "identity_source": "T3 orchestrator_capabilities inherited runtime options, verified 2026-11-05",
+    "other_editor_models": []
+  }
+}

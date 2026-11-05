@@ -1,0 +1,24 @@
+{
+  "selected_columns": [
+    {
+      "tensor": "model.layers.22.feed_forward.w2.weight",
+      "columns": [
+        2063,
+        2233,
+        4543,
+        7501
+      ]
+    },
+    {
+      "tensor": "model.layers.23.feed_forward.w2.weight",
+      "columns": [
+        1020,
+        4692,
+        5801,
+        6413
+      ]
+    }
+  ],
+  "inspection_sha256": "d3ff7655377bfe9e7bbacae6044e79830e17cb065a9ee023958a200ed790fdea",
+  "rationale": "The sole discovery failure is 23 instead of 35 on updated power. Select four adverse columns in layer 22 and four in layer 23 excluding all Sol columns. Layer 22 can alter the residual entering the final convolution block; layer 23 directly alters late token preference. Column 4543 has large activation but small projection, so causal effect is uncertain. Half-scaling and zeroing test intervention strength without further column search. Seven passing cases include four unchanged orders and revocation. Attribution is descriptive and ignores sandwich normalization. No claim of a general correction mechanism."
+}

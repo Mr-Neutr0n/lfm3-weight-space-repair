@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "b95d4efb034f2c0ba436c5d7b5e871f29f78cab804bfa98030f2105fda580011",
+  "splits": {
+    "practice": {
+      "file": "practice.jsonl",
+      "cases": 50,
+      "sha256": "7b5e51c0cfa1ea018f23f8f9936382f3f65d858fbe49af1b2d30495aa0ac7c6b"
+    },
+    "development": {
+      "file": "development.jsonl",
+      "cases": 50,
+      "sha256": "6ce480db054c002873b192bdc52b0b5812f7de19f2cfb82caff0dc42e1000b2b"
+    }
+  }
+}

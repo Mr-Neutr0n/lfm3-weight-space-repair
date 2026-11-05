@@ -1,0 +1,47 @@
+{
+  "actual_changed_scalars": 16384,
+  "after_sha256": {
+    "model.layers.22.feed_forward.w2.weight": "618446ff325248b9c44bd55f2adfadefddb99156ab6f23cd2b63d22b62ff3617",
+    "model.layers.23.feed_forward.w2.weight": "644998c2e940c5d7bf5cc74a96e95a0af5e967716ba24ffeebdabed0317f42d2"
+  },
+  "edits": [
+    {
+      "tensor": "model.layers.22.feed_forward.w2.weight",
+      "columns": [
+        2063,
+        2233,
+        4543,
+        7501
+      ],
+      "factor": 0.0,
+      "before_sha256": "99acd16d213731e7e6ffea93c990561633e0bf00b703386d307a23c2b1e6da20",
+      "shape": [
+        2048,
+        7680
+      ],
+      "actual_changed_scalars": 8192,
+      "delta_l2": 1.3574750423431396,
+      "delta_max_abs": 0.091796875
+    },
+    {
+      "tensor": "model.layers.23.feed_forward.w2.weight",
+      "columns": [
+        1020,
+        4692,
+        5801,
+        6413
+      ],
+      "factor": 0.0,
+      "before_sha256": "0b304847d061b9c444b2b32620ce27ed4785478a1b43dca355a5648fa8420f37",
+      "shape": [
+        2048,
+        7680
+      ],
+      "actual_changed_scalars": 8192,
+      "delta_l2": 1.7842682600021362,
+      "delta_max_abs": 0.158203125
+    }
+  ],
+  "columns_file": "candidate-b-columns.safetensors",
+  "columns_file_sha256": "f10d4d2dac8e6f4002b9d0063bc1dd49f011f0a6132662175b3265da5f141b55"
+}

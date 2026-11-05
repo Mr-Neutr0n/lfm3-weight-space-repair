@@ -1,0 +1,30 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "model_revision": "0dc4268b561499c648c7ba7c9466bf3d8d01517a",
+  "editor": "gpt-6-astra",
+  "method": "manual two-layer adverse-column suppression",
+  "edits": [
+    {
+      "tensor": "model.layers.22.feed_forward.w2.weight",
+      "columns": [
+        2063,
+        2233,
+        4543,
+        7501
+      ],
+      "factor": 0.5,
+      "before_sha256": "99acd16d213731e7e6ffea93c990561633e0bf00b703386d307a23c2b1e6da20"
+    },
+    {
+      "tensor": "model.layers.23.feed_forward.w2.weight",
+      "columns": [
+        1020,
+        4692,
+        5801,
+        6413
+      ],
+      "factor": 0.5,
+      "before_sha256": "0b304847d061b9c444b2b32620ce27ed4785478a1b43dca355a5648fa8420f37"
+    }
+  ]
+}

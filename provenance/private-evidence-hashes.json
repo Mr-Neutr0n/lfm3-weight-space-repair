@@ -1,0 +1,27 @@
+[
+  {
+    "artifact": "original-final",
+    "sha256": "f88f4fdf6b593ddd3ecf298fb6fa4be1fd6f83510d81f4986d9bee64596e58d3",
+    "public_contents": false
+  },
+  {
+    "artifact": "fresh-final-responses",
+    "sha256": "f41d86553719aeae945915c98a29f33ea9cf5a31c248c2321cc2b42e8274c563",
+    "public_contents": false
+  },
+  {
+    "artifact": "fresh-final-cases",
+    "sha256": "b6527f3b5cbb861c1085b809ff63de35425bbfa8c37f1c94d808852572159adb",
+    "public_contents": false
+  },
+  {
+    "artifact": "astra-handoff",
+    "sha256": "52a2105c743537437fd955c810dc7c26294eeb9379cee136d800fd7ea1fa621b",
+    "public_contents": false
+  },
+  {
+    "artifact": "sol-report",
+    "sha256": "a2c8ece7977ea74dc992105b195357f0a1ea1945caff7b3b0c823bae15aeedaf",
+    "public_contents": false
+  }
+]
