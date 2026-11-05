@@ -122,7 +122,7 @@ effort. This is not a causal comparison of editor model identity alone.
 The [experiment repository](https://github.com/Mr-Neutr0n/lfm3-weight-space-repair)
 contains the plans, decisions, patches, original/modified column bytes, pinned
 model-file hashes, public raw practice/development responses and a CPU verification
-entry point. The [Kaggle notebook](https://www.kaggle.com/code/uranium53/lfm3-weight-space-repair)
+entry point. The [Kaggle notebook](https://www.kaggle.com/code/uranium53/lfm3-weight-repair-sol-astra-and-a-fresh-test)
 recomputes the tables from released graded outcomes without a GPU.
 
 Private final inputs, seeds and full final responses are withheld. Final tables

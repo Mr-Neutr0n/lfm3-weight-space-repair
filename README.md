@@ -10,7 +10,7 @@ on a fresh hidden suite generated after Astra stopped editing.
 [![Verify evidence](https://github.com/Mr-Neutr0n/lfm3-weight-space-repair/actions/workflows/verify.yml/badge.svg)](https://github.com/Mr-Neutr0n/lfm3-weight-space-repair/actions/workflows/verify.yml)
 
 [Illustrated HF write-up](https://huggingface.co/spaces/hxrikp/lfm3-weight-space-repair)
-· [Kaggle notebook](https://www.kaggle.com/code/uranium53/lfm3-weight-space-repair)
+· [Kaggle notebook](https://www.kaggle.com/code/uranium53/lfm3-weight-repair-sol-astra-and-a-fresh-test)
 · [Method and limits](docs/method.md)
 · [CPU replay](replay.py)
 
